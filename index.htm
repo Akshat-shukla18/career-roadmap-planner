@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <!-- Background -->
+    <div class="hero-bg"></div>
+
+    <!-- NAV -->
+    <header>
+        <div class="logo">Roadmap<span style="color:var(--primary)">AI</span></div>
+        <div class="nav-links">
+            <a href="#" onclick="showForm()">New Plan</a>
+            <a href="#" onclick="resetPlan()">Reset</a>
+        </div>
+        <div onclick="toggleTheme()" class="theme-toggle" id="theme-icon">🌙</div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Build Your Dream<br>Career in Tech</h1>
+            <p>Personalized 6-month roadmap • Daily micro-tasks • Real-time progress • Confetti when you crush milestones</p>
+            <button onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})" class="cta-btn">Start My Roadmap →</button>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <!-- FORM SECTION -->
+        <section id="form-section">
+            <div class="form-card glow-neon">
+                <h2>Tell us about you</h2>
+                
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Year of Graduation</label>
+                        <div class="custom-select">
+                            <select id="grad-year">
+                                <option value="2026">2026</option>
+                                <option value="2025" selected>2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023 (Graduate)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Degree</label>
+                        <div class="custom-select">
+                            <select id="degree">
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BSc CS">BSc Computer Science</option>
+                                <option value="MCA">MCA</option>
+                                <option value="M.Tech">M.Tech</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Current Status</label>
+                        <div class="custom-select">
+                            <select id="status">
+                                <option value="Sem 1">Semester 1</option>
+                                <option value="Sem 3">Semester 3</option>
+                                <option value="Sem 5" selected>Semester 5</option>
+                                <option value="Sem 7">Semester 7</option>
+                                <option value="Graduate">Already Graduate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Target Role (choose one)</h3>
+                <div class="role-grid" id="role-grid"></div>
+
+                <button onclick="generateRoadmap()" class="generate-btn">🚀 Generate My 6-Month Plan</button>
+            </div>
+        </section>
+
+        <!-- RESULT SECTION -->
+        <section id="result-section" class="result-section">
+            <div class="dashboard">
+                <!-- Progress Circle -->
+                <div class="progress-container">
+                    <div class="progress-circle">
+                        <svg width="220" height="220">
+                            <defs>
+                                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f5ff"/>
+                                    <stop offset="100%" stop-color="#ff00aa"/>
+                                </linearGradient>
+                            </defs>
+                            <circle class="circle-bg" cx="110" cy="110" r="92"/>
+                            <circle id="progress-circle" class="circle" cx="110" cy="110" r="92" stroke-dasharray="578" stroke-dashoffset="578"/>
+                        </svg>
+                        <div class="progress-text">
+                            <div id="progress-percent">0</div>
+                            <div class="progress-label">COMPLETE</div>
+                        </div>
+                    </div>
+                    <div id="plan-header" class="plan-header"></div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-panel">
+                    <div class="stat-card">
+                        <div class="stat-label">Total Study Hours</div>
+                        <div id="total-hours" class="stat-value">0</div>
+                    </div>
+                    <div class="stat-row">
+                        <div class="stat-card small">
+                            <div class="stat-label">Months</div>
+                            <div id="months-count" class="stat-value">6</div>
+                        </div>
+                        <div class="stat-card small">
+                            <div class="stat-label">Tasks</div>
+                            <div id="total-tasks" class="stat-value">128</div>
+                        </div>
+                    </div>
+                    <button onclick="downloadPDF()" class="btn-primary">📄 Download as PDF</button>
+                    <button onclick="resetPlan()" class="btn-outline">Reset Plan</button>
+                </div>
+            </div>
+
+            <h2 class="timeline-title">Your 6-Month Roadmap</h2>
+            <div id="timeline" class="timeline"></div>
+        </section>
+    </div>
+
+    <canvas id="confetti" class="confetti-canvas"></canvas>
+
+    <script src="hard.js"></script>
+</body>
+</html>
