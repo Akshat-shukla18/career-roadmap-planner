@@ -58,6 +58,61 @@ const roleTemplates = {
         { m:5, title:"Microservices", hours:25, weeks:[] },
         { m:6, title:"Leadership & Interviews", hours:15, weeks:[] }
     ]
+    ,
+    "Cybersecurity Specialist": [
+        { m:1, title:"Security Fundamentals & Networking", hours:20, weeks:[
+            {w:1, title:"Week 1: Networking Basics", tasks:["OSI model + TCP/IP","Wireshark basics","Mini lab: packet capture"]},
+            {w:2, title:"Week 2: Linux & Shell", tasks:["Linux hardening","Bash scripting","Permissions & users"]}
+        ]},
+        { m:2, title:"Web App Security", hours:22, weeks:[
+            {w:1, title:"Week 1: OWASP Top 10", tasks:["Exploit & fix XSS","SQLi labs","Secure headers"]},
+            {w:2, title:"Week 2: Auth & Sessions", tasks:["JWT vs sessions","Implement secure auth","Pen-test checklist"]}
+        ]},
+        { m:3, title:"Cloud Security", hours:20, weeks:[] },
+        { m:4, title:"Incident Response", hours:18, weeks:[] },
+        { m:5, title:"Certifications Prep", hours:22, weeks:[] },
+        { m:6, title:"Portfolio & Bug Bounties", hours:16, weeks:[] }
+    ],
+    "Cloud Engineer": [
+        { m:1, title:"Cloud Foundations (AWS/GCP/Azure)", hours:22, weeks:[] },
+        { m:2, title:"Infrastructure as Code", hours:20, weeks:[] },
+        { m:3, title:"CI/CD & Monitoring", hours:20, weeks:[] },
+        { m:4, title:"Containers & Orchestration", hours:24, weeks:[] },
+        { m:5, title:"Security & Cost Optimization", hours:18, weeks:[] },
+        { m:6, title:"Projects & Certification", hours:16, weeks:[] }
+    ],
+    "Mobile Developer": [
+        { m:1, title:"Kotlin/Swift Fundamentals", hours:20, weeks:[] },
+        { m:2, title:"UI & Navigation Patterns", hours:18, weeks:[] },
+        { m:3, title:"State Management & Architecture", hours:22, weeks:[] },
+        { m:4, title:"Native APIs & Performance", hours:20, weeks:[] },
+        { m:5, title:"Testing & Play Store/App Store", hours:18, weeks:[] },
+        { m:6, title:"Portfolio Apps & Interviews", hours:16, weeks:[] }
+    ],
+    "Product Manager": [
+        { m:1, title:"Product Thinking & Research", hours:18, weeks:[] },
+        { m:2, title:"Roadmaps & Prioritization", hours:16, weeks:[] },
+        { m:3, title:"Metrics & Experiments", hours:18, weeks:[] },
+        { m:4, title:"Stakeholder Communication", hours:16, weeks:[] },
+        { m:5, title:"Go-to-market & Launches", hours:16, weeks:[] },
+        { m:6, title:"Interview Prep & Case Studies", hours:14, weeks:[] }
+    ],
+    "UX/UI Designer": [
+        { m:1, title:"Design Basics & Research", hours:18, weeks:[] },
+        { m:2, title:"Wireframing & Prototyping", hours:20, weeks:[] },
+        { m:3, title:"Visual Design & Tools", hours:20, weeks:[] },
+        { m:4, title:"Design Systems & Accessibility", hours:18, weeks:[] },
+        { m:5, title:"Portfolio Projects", hours:22, weeks:[] },
+        { m:6, title:"Interviews & Case Studies", hours:14, weeks:[] }
+    ],
+    "Data Scientist": [
+        { m:1, title:"Python & Math Foundations", hours:24, weeks:[] },
+        { m:2, title:"Machine Learning Basics", hours:26, weeks:[] },
+        { m:3, title:"Deep Learning", hours:26, weeks:[] },
+        { m:4, title:"Production ML & MLOps", hours:20, weeks:[] },
+        { m:5, title:"NLP & CV Projects", hours:22, weeks:[] },
+        { m:6, title:"Research + Portfolio", hours:18, weeks:[] }
+    ]
 };
 
 // ====================== GLOBAL VARIABLES ======================

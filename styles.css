@@ -157,11 +157,25 @@ header {
     background: var(--card);
     backdrop-filter: blur(20px);
     border-radius: 24px;
+    margin-bottom: 50px;
     padding: 3rem;
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     transition: all 0.5s;
 }
+
+.feedback-textarea {
+    min-height: 140px;
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+    resize: vertical;
+    font-size: 1rem;
+}
+
+#help-section { margin: 2.5rem 0; }
 
 .form-grid {
     display: grid;
