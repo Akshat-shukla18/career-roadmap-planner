@@ -10,9 +10,9 @@
 [data-theme="light"] {
     --primary: #00b8ff;
     --secondary: #7b2cbf;
-    --accent: #ff2e63;
+    --accent: #fdf2f5;
     --bg: #f8f9ff;
-    --card: rgba(255,255,255,0.95);
+    --card: rgba(255,255,255,0.85);
     --text: #1a1a2e;
 }
 
@@ -21,7 +21,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body, .form-card, .month-card, .stat-card, .role-card {
+    transition: background 0.4s ease, color 0.4s ease;
+}
 body {
     font-family: 'Inter', sans-serif;
     background: var(--bg);
@@ -35,7 +37,7 @@ body {
 .hero-bg {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #1a0033, #000033, #001a33);
+    background: linear-gradient(135deg, var(--bg), var(--secondary), var(--primary));
     background-size: 400% 400%;
     animation: gradientShift 25s ease infinite;
     z-index: -2;
@@ -243,7 +245,7 @@ header {
     font-size: 1.4rem;
     font-weight: 700;
     background: linear-gradient(90deg, #00f5ff, #ff00aa);
-    color: #000;
+    color: var(--text);
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -254,7 +256,9 @@ header {
     transform: scale(1.03);
     box-shadow: 0 0 50px #00f5ff;
 }
-
+.custom-select select option {
+    color: #000;
+}
 /* Dashboard & Progress */
 .dashboard {
     display: grid;
