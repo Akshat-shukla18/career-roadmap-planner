@@ -205,7 +205,7 @@ function renderTimeline() {
                 ${month.weeks.map((week, wIndex) => `
                     <div class="week-card" onclick="toggleWeek(this)">
                         <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <strong>Week ${week.w}: ${week.title}</strong>
+                            <strong> ${week.w}: ${week.title}</strong>
                             <span>${week.tasks.filter(t=>t.completed).length}/${week.tasks.length} done</span>
                         </div>
                         <div class="task-list">
